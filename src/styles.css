@@ -1,0 +1,49 @@
+.folder-tree .tree-parent,
+.folder-tree li.first-tree{
+    list-style-type:none;
+    margin:0;
+    padding:10px 5px 0 5px;
+    position:relative
+}
+
+.folder-tree .tree-parent::before, .folder-tree .tree-parent::after {
+    content:'';
+    left:-20px;
+    position:absolute;
+    right:auto
+}
+.folder-tree .tree-parent::before {
+    border-left:1px solid #f0f0f0;
+    bottom:50px;
+    height:100%;
+    top:0;
+    width:1px
+}
+/* .folder-tree li.origin-tree::after,
+.folder-tree li.origin-tree::before {
+    content:none;
+} */
+
+.folder-tree .tree-parent::after {
+    border-top:1px solid #f0f0f0;
+    height:20px;
+    top:30px;
+    width:25px
+}
+.folder-tree .tree-parent span,
+.folder-tree .first-tree span {
+    /* -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border:1px solid #999;
+    border-radius:5px; */
+    display:inline-block;
+    /* padding:3px 8px;
+    text-decoration:none */
+}
+
+.folder-tree>ul>.tree-parent::before, .folder-tree>ul>.tree-parent::after {
+    border:0
+}
+.folder-tree .tree-parent:last-child::before {
+    height:30px
+}
